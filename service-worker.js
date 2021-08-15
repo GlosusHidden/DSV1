@@ -1,6 +1,6 @@
 var doCache = true;
 
-var CACHE_NAME = 'my-pwa-cache-v1';
+var CACHE_NAME = 'my-pwa-cache-v2';
 
 self.addEventListener("activate", event => {
   const cacheWhitelist = [CACHE_NAME];
@@ -22,7 +22,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open(CACHE_NAME)
         .then(function(cache) {
-          fetch("asset-manifest.json")
+          fetch("https://glosushidden.github.io//DSV1/asset-manifest.json")
             .then(response => {
               response.json()
             })
